@@ -406,9 +406,9 @@ export const Experience = () => {
         rotation-y={degToRad(1)}
         anchorY={"bottom"}
       >
-        we raised over $35,000 for their facility{"\n"}{"\n"}
-  We gave 35% of money made to the local womens crisis center {"\n"} {"\n"}
-                            shirt designs to sale. I created a website and did marketing at school half-time shows{"\n"} {"\n"} 
+        {"\n"}{"\n"}
+  I gave 35% of the proceeds to the local womens crisis center {"\n"} {"\n"}
+                            shirt designs to sale. I created a website, did marketing at school half-time shows{"\n"} {"\n"} 
       While attending high school I took a graphic design class and began making .{"\n"}{"\n"}
       
       {"\n"}
