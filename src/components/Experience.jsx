@@ -104,7 +104,7 @@ export const Experience = () => {
         font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
         scale={.19}
         position-x={.8}
-        position-y={1.5}
+        position-y={1.85}
         position-z={.08}
         lineHeight={-0.4}
         textAlign="center"
@@ -141,7 +141,7 @@ export const Experience = () => {
         font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
         scale={.07}
         position-x={.8}
-        position-y={1.2}
+        position-y={1.6}
         position-z={.10}
         lineHeight={-0.4}
         textAlign="center"
@@ -180,7 +180,7 @@ export const Experience = () => {
         font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
         scale={.09}
         position-x={.8}
-        position-y={1.3}
+        position-y={1.7}
         position-z={.10}
         lineHeight={-0.4}
         textAlign="center"
@@ -212,12 +212,50 @@ export const Experience = () => {
         </meshBasicMaterial>
         
       </Text>
-
+      <Text
+        font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
+        scale={.07}
+        position-x={.9}
+        position-y={1.25}
+        position-z={.10}
+        lineHeight={-0.4}
+        textAlign="center"
+        rotation-y={degToRad(1)}
+        anchorY={"bottom"}
+      >
+  Used adobe software to create personal designs for each client  {"\n"} {"\n"}
+                                          Collabrated with clients and marketing teams to bring the best results{"\n"} {"\n"} 
+      Worked with a wide variety of companies and people{"\n"}{"\n"}
+      
+      {"\n"}
+      
+        
+        
+        <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false}
+         
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+            <Float floatIntensity={4} rotationIntensity={4}>
+              <Camping
+                scale={0}
+                rotation-y={-degToRad(180)}
+                rotation-x={degToRad(50)}
+                position-y={-0.5}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
+        
+      </Text>
       <Text
         font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
         scale={.1}
         position-x={.8}
-        position-y={.7}
+        position-y={1.3}
         position-z={.10}
         lineHeight={-0.4}
         textAlign="center"
@@ -250,12 +288,52 @@ export const Experience = () => {
         </meshBasicMaterial>
         
       </Text>
+      <Text
+        font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
+        scale={.07}
+        position-x={.9}
+        position-y={.54}
+        position-z={.10}
+        lineHeight={-0.4}
+        textAlign="center"
+        rotation-y={degToRad(1)}
+        anchorY={"bottom"}
+      >
+        we raised over $35,000 for their facility{"\n"}{"\n"}
+  We gave 35% of money made to the local womens crisis center {"\n"} {"\n"}
+                            shirt designs to sale. I created a website and did marketing at school half-time shows{"\n"} {"\n"} 
+      While in attending high school I took a graphic design class and began making .{"\n"}{"\n"}
+      
+      {"\n"}
+      
+        
+        
+        <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false}
+         
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+            <Float floatIntensity={4} rotationIntensity={4}>
+              <Camping
+                scale={0}
+                rotation-y={-degToRad(180)}
+                rotation-x={degToRad(50)}
+                position-y={-0.5}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
+        
+      </Text>
 
       <Text
         font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
         scale={.1}
         position-x={.8}
-        position-y={.6}
+        position-y={.98}
         position-z={.10}
         lineHeight={-0.4}
         textAlign="center"
@@ -289,11 +367,90 @@ export const Experience = () => {
         </meshBasicMaterial>
         
       </Text>
+
+      <Text
+        font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
+        scale={.07}
+        position-x={.9}
+        position-y={.9}
+        position-z={.10}
+        lineHeight={-0.4}
+        textAlign="center"
+        rotation-y={degToRad(1)}
+        anchorY={"bottom"}
+      >
+  Helped clients through emotianal and behavioural situtations  {"\n"} {"\n"}
+                                          Filed written reports that the state reqiured on a daily basis{"\n"} {"\n"} 
+      Manged up to fifteen clients and six staff.{"\n"}{"\n"}
+      
+      {"\n"}
+      
+        
+        
+        <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false}
+         
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+            <Float floatIntensity={4} rotationIntensity={4}>
+              <Camping
+                scale={0}
+                rotation-y={-degToRad(180)}
+                rotation-x={degToRad(50)}
+                position-y={-0.5}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
+        
+      </Text>
+
+      <Text
+        font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
+        scale={.1}
+        position-x={.8}
+        position-y={.62}
+        position-z={.10}
+        lineHeight={-0.4}
+        textAlign="center"
+        rotation-y={degToRad(1)}
+        anchorY={"bottom"}
+      >
+        
+        {"\n"}{"\n"}
+
+      Clothing Brand Owner | One Year
+      {"\n"}
+      {"\n"}
+        
+        <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false}
+         
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+            <Float floatIntensity={4} rotationIntensity={4}>
+              <Camping
+                scale={0}
+                rotation-y={-degToRad(180)}
+                rotation-x={degToRad(50)}
+                position-y={-0.5}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
+        
+      </Text>
       
       <group rotation-y={degToRad(160)} position-x={2.65} position-y={-.35}>
         <Camping scale={4} html />
         <mesh ref={meshFitCameraStore} visible={true}>
-          <boxGeometry args={[-1, -4.5, -.12]} />
+          <boxGeometry args={[-1, -5.5, -.12]} />
           <meshBasicMaterial color="red" transparent opacity={0.5} />
         </mesh>
       </group>
