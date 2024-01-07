@@ -14,6 +14,7 @@ import { Color } from "three";
 import { degToRad, lerp } from "three/src/math/MathUtils";
 import { Camping } from "./Camping";
 import { currentPageAtom } from "./UI";
+import { Trees } from "./Trees";
 
 const bloomColor = new Color("#7b4ad4");
 bloomColor.multiplyScalar(1.5);
@@ -23,6 +24,16 @@ export const Experience = () => {
   const meshFitCameraHome = useRef();
   const meshFitCameraStore = useRef();
   const textMaterial = useRef();
+  const textMaterial2 = useRef();
+  const textMaterial3 = useRef();
+  const textMaterial4 = useRef();
+  const textMaterial5 = useRef();
+  const textMaterial6 = useRef();
+  const textMaterial7 = useRef();
+  const textMaterial8 = useRef();
+  const textMaterial9 = useRef();
+  const textMaterial10 = useRef();
+
   const [currentPage, setCurrentPage] = useAtom(currentPageAtom);
 
   useFrame((_, delta) => {
@@ -32,6 +43,79 @@ export const Experience = () => {
       delta * 1.5
     );
   });
+
+  useFrame((_, delta) => {
+    textMaterial2.current.opacity = lerp(
+      textMaterial2.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
+  useFrame((_, delta) => {
+    textMaterial3.current.opacity = lerp(
+      textMaterial3.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
+  useFrame((_, delta) => {
+    textMaterial4.current.opacity = lerp(
+      textMaterial4.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
+  useFrame((_, delta) => {
+    textMaterial5.current.opacity = lerp(
+      textMaterial5.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
+  useFrame((_, delta) => {
+    textMaterial6.current.opacity = lerp(
+      textMaterial6.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
+  useFrame((_, delta) => {
+    textMaterial7.current.opacity = lerp(
+      textMaterial7.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
+  useFrame((_, delta) => {
+    textMaterial8.current.opacity = lerp(
+      textMaterial8.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
+  useFrame((_, delta) => {
+    textMaterial9.current.opacity = lerp(
+      textMaterial9.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
+  useFrame((_, delta) => {
+    textMaterial10.current.opacity = lerp(
+      textMaterial10.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  
 
   const intro = async () => {
     controls.current.dolly(-22);
@@ -66,13 +150,13 @@ export const Experience = () => {
     <>
       <CameraControls ref={controls} />
       <mesh ref={meshFitCameraHome} position-z={1.5} visible={false}>
-        <boxGeometry args={[7.4, 2.1, 2]} />
+        <boxGeometry args={[12, 2.1, 2]} />
         <meshBasicMaterial color="orange" transparent opacity={0.5} />
       </mesh>
 
       <Text
         font={"fonts/RubikGlitch-Regular.ttf"}
-        position-x={-.6}
+        position-x={-3.}
         position-y={-0.5}
         position-z={1}
         lineHeight={0.8}
@@ -100,6 +184,8 @@ export const Experience = () => {
           </RenderTexture>
         </meshBasicMaterial>
       </Text>
+      <Trees scale={100} />
+      <Environment preset="sunset"/>
       <Text
         font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
         scale={.19}
@@ -111,16 +197,10 @@ export const Experience = () => {
         rotation-y={degToRad(1)}
         anchorY={"bottom"}
       >
-        
-        
-
-        EXPERIENCE
-        
-        
-        <meshBasicMaterial
+         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
-         
+          ref={textMaterial3}
         >
           <RenderTexture attach={"map"}>
             <color attach="background" args={["#c9c7c7"]} />
@@ -135,6 +215,12 @@ export const Experience = () => {
             </Float>
           </RenderTexture>
         </meshBasicMaterial>
+        
+
+        EXPERIENCE
+        
+        
+       
         
       </Text>
       <Text
@@ -159,19 +245,11 @@ export const Experience = () => {
         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
-         
+          ref={textMaterial5}
         >
           <RenderTexture attach={"map"}>
             <color attach="background" args={["#c9c7c7"]} />
             <Environment preset="sunset" />
-            <Float floatIntensity={4} rotationIntensity={4}>
-              <Camping
-                scale={0}
-                rotation-y={-degToRad(180)}
-                rotation-x={degToRad(50)}
-                position-y={-0.5}
-              />
-            </Float>
           </RenderTexture>
         </meshBasicMaterial>
         
@@ -187,29 +265,23 @@ export const Experience = () => {
         rotation-y={degToRad(1)}
         anchorY={"bottom"}
       >
+         <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false}
+          ref={textMaterial6}
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+          </RenderTexture>
+        </meshBasicMaterial>
+
       Bjork Print as Front-End Developer | Sep 22 - current{"\n"}{"\n"}
       {"\n"}
       
         
         
-        <meshBasicMaterial
-          color={bloomColor}
-          toneMapped={false}
-         
-        >
-          <RenderTexture attach={"map"}>
-            <color attach="background" args={["#c9c7c7"]} />
-            <Environment preset="sunset" />
-            <Float floatIntensity={4} rotationIntensity={4}>
-              <Camping
-                scale={0}
-                rotation-y={-degToRad(180)}
-                rotation-x={degToRad(50)}
-                position-y={-0.5}
-              />
-            </Float>
-          </RenderTexture>
-        </meshBasicMaterial>
+        
         
       </Text>
       <Text
@@ -234,7 +306,7 @@ export const Experience = () => {
         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
-         
+          ref={textMaterial7}
         >
           <RenderTexture attach={"map"}>
             <color attach="background" args={["#c9c7c7"]} />
@@ -271,7 +343,7 @@ export const Experience = () => {
         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
-         
+          ref={textMaterial4}
         >
           <RenderTexture attach={"map"}>
             <color attach="background" args={["#c9c7c7"]} />
@@ -302,7 +374,7 @@ export const Experience = () => {
         we raised over $35,000 for their facility{"\n"}{"\n"}
   We gave 35% of money made to the local womens crisis center {"\n"} {"\n"}
                             shirt designs to sale. I created a website and did marketing at school half-time shows{"\n"} {"\n"} 
-      While in attending high school I took a graphic design class and began making .{"\n"}{"\n"}
+      While attending high school I took a graphic design class and began making .{"\n"}{"\n"}
       
       {"\n"}
       
@@ -311,7 +383,7 @@ export const Experience = () => {
         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
-         
+          ref={textMaterial8}
         >
           <RenderTexture attach={"map"}>
             <color attach="background" args={["#c9c7c7"]} />
@@ -350,7 +422,7 @@ export const Experience = () => {
         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
-         
+          ref={textMaterial9}
         >
           <RenderTexture attach={"map"}>
             <color attach="background" args={["#c9c7c7"]} />
@@ -390,7 +462,7 @@ export const Experience = () => {
         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
-         
+          ref={textMaterial10}
         >
           <RenderTexture attach={"map"}>
             <color attach="background" args={["#c9c7c7"]} />
@@ -429,7 +501,7 @@ export const Experience = () => {
         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
-         
+          ref={textMaterial2}
         >
           <RenderTexture attach={"map"}>
             <color attach="background" args={["#c9c7c7"]} />
@@ -449,8 +521,8 @@ export const Experience = () => {
       
       <group rotation-y={degToRad(160)} position-x={2.65} position-y={-.35}>
         <Camping scale={4} html />
-        <mesh ref={meshFitCameraStore} visible={true}>
-          <boxGeometry args={[-1, -5.5, -.12]} />
+        <mesh ref={meshFitCameraStore} visible={false}>
+          <boxGeometry args={[-1, -5.0, -.12]} />
           <meshBasicMaterial color="red" transparent opacity={0.5} />
         </mesh>
       </group>
