@@ -33,6 +33,10 @@ export const Experience = () => {
   const textMaterial8 = useRef();
   const textMaterial9 = useRef();
   const textMaterial10 = useRef();
+  const textMaterial11 = useRef();
+  const textMaterial12 = useRef();
+  const textMaterial13 = useRef();
+  const textMaterial14 = useRef();
 
   const [currentPage, setCurrentPage] = useAtom(currentPageAtom);
 
@@ -116,6 +120,37 @@ export const Experience = () => {
     );
   });
   
+  useFrame((_, delta) => {
+    textMaterial11.current.opacity = lerp(
+      textMaterial11.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+  useFrame((_, delta) => {
+    textMaterial12.current.opacity = lerp(
+      textMaterial12.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+
+  useFrame((_, delta) => {
+    textMaterial13.current.opacity = lerp(
+      textMaterial13.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+
+  useFrame((_, delta) => {
+    textMaterial14.current.opacity = lerp(
+      textMaterial14.current.opacity,
+      currentPage === "store"  ? 1 : 0,
+      delta * 4
+    );
+  });
+
 
   const intro = async () => {
     controls.current.dolly(-22);
@@ -184,7 +219,7 @@ export const Experience = () => {
           </RenderTexture>
         </meshBasicMaterial>
       </Text>
-      <Trees scale={100} />
+      
       <Environment preset="sunset"/>
       <Text
         font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
@@ -521,21 +556,19 @@ export const Experience = () => {
       
       <Text
         font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
-        scale={.08}
+        scale={.14}
         position-x={2.57}
-        position-y={1.1}
-        position-z={-0.18}
+        position-y={2}
+        position-z={-0.28}
         lineHeight={.8}
-        textAlign="right"
+        textAlign="center"
         rotation-y={degToRad(-20)}
-        
       >
-        CONTACT
-      
-        
+    CONTACT
         <meshBasicMaterial
           color={bloomColor}
           toneMapped={false}
+          ref={textMaterial11}
           
         >
           <RenderTexture attach={"map"}>
@@ -553,8 +586,104 @@ export const Experience = () => {
         </meshBasicMaterial>
         
       </Text>
-      <group rotation-y={degToRad(160)} position-x={2.65} position-y={-.35}>
-        <Camping scale={4} html />
+
+
+      <Text
+        font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
+        scale={.08}
+        position-x={2.9}
+        position-y={1.8}
+        position-z={-0.18}
+        lineHeight={.8}
+        textAlign="center"
+        rotation-y={degToRad(-20)}
+      >
+    Email:KobeCarter00@gmail.com
+        <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false} 
+          ref={textMaterial12}
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+            <Float floatIntensity={4} rotationIntensity={4}>
+              <Camping
+                scale={0}
+                rotation-y={-degToRad(180)}
+                rotation-x={degToRad(50)}
+                position-y={-0.5}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
+      </Text>
+
+
+      <Text
+        font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
+        scale={.08}
+        position-x={2.9}
+        position-y={1.6}
+        position-z={-0.20}
+        lineHeight={.8}
+        textAlign="center"
+        rotation-y={degToRad(-20)}
+      >
+    GitHub:github.com/KJcarter6
+        <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false} 
+          ref={textMaterial13}
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+            <Float floatIntensity={4} rotationIntensity={4}>
+              <Camping
+                scale={0}
+                rotation-y={-degToRad(180)}
+                rotation-x={degToRad(50)}
+                position-y={-0.5}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
+      </Text>
+
+      <Text
+        font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
+        scale={.075}
+        position-x={2.9}
+        position-y={1.4}
+        position-z={-0.22}
+        lineHeight={.8}
+        textAlign="center"
+        rotation-y={degToRad(-20)}
+      >
+    Linkedin:linkedin.com/in/kjcarter6/
+        <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false} 
+          ref={textMaterial14}
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+            <Float floatIntensity={4} rotationIntensity={4}>
+              <Camping
+                scale={0}
+                rotation-y={-degToRad(180)}
+                rotation-x={degToRad(50)}
+                position-y={-0.5}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
+      </Text>
+
+      <group rotation-y={degToRad(160)} position-x={2.65} position-y={-.17}>
+        <Camping scale={6} html />
         <mesh ref={meshFitCameraStore} visible={false}>
           <boxGeometry args={[-1, -5.0, -.12]} />
           <meshBasicMaterial color="red" transparent opacity={0.5} />
