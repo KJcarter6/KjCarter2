@@ -150,15 +150,15 @@ export const Experience = () => {
     <>
       <CameraControls ref={controls} />
       <mesh ref={meshFitCameraHome} position-z={1.5} visible={false}>
-        <boxGeometry args={[12, 2.1, 2]} />
+        <boxGeometry args={[9.5, 2.1, 2]} />
         <meshBasicMaterial color="orange" transparent opacity={0.5} />
       </mesh>
 
       <Text
         font={"fonts/RubikGlitch-Regular.ttf"}
-        position-x={-3.}
+        position-x={-1}
         position-y={-0.5}
-        position-z={1}
+        position-z={2}
         lineHeight={0.8}
         textAlign="center"
         rotation-y={degToRad(28)}
@@ -276,7 +276,7 @@ export const Experience = () => {
           </RenderTexture>
         </meshBasicMaterial>
 
-      Bjork Print as Front-End Developer | Sep 22 - current{"\n"}{"\n"}
+      Bjork Print as Front-End Developer | Sep 23 - current{"\n"}{"\n"}
       {"\n"}
       
         
@@ -519,6 +519,40 @@ export const Experience = () => {
         
       </Text>
       
+      <Text
+        font={"fonts/Tektur-VariableFont_wdth,wght.ttf"}
+        scale={.08}
+        position-x={2.57}
+        position-y={1.1}
+        position-z={-0.18}
+        lineHeight={.8}
+        textAlign="right"
+        rotation-y={degToRad(-20)}
+        
+      >
+        CONTACT
+      
+        
+        <meshBasicMaterial
+          color={bloomColor}
+          toneMapped={false}
+          
+        >
+          <RenderTexture attach={"map"}>
+            <color attach="background" args={["#c9c7c7"]} />
+            <Environment preset="sunset" />
+            <Float floatIntensity={4} rotationIntensity={4}>
+              <Camping
+                scale={0}
+                rotation-y={-degToRad(180)}
+                rotation-x={degToRad(50)}
+                position-y={-0.5}
+              />
+            </Float>
+          </RenderTexture>
+        </meshBasicMaterial>
+        
+      </Text>
       <group rotation-y={degToRad(160)} position-x={2.65} position-y={-.35}>
         <Camping scale={4} html />
         <mesh ref={meshFitCameraStore} visible={false}>
